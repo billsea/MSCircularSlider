@@ -8,11 +8,11 @@
 import UIKit
 
 extension MSCircularSlider {
-    
+
     //================================================================================
     // VALUE PROPERTIES
     //================================================================================
-    
+
     @IBInspectable public var _minimumValue: Double {
         get {
             return minimumValue
@@ -21,7 +21,7 @@ extension MSCircularSlider {
             minimumValue = newValue
         }
     }
-    
+
     @IBInspectable public var _maximumValue: Double {
         get {
             return maximumValue
@@ -30,7 +30,7 @@ extension MSCircularSlider {
             maximumValue = newValue
         }
     }
-    
+
     @IBInspectable public var _currentValue: Double {
         get {
             return currentValue
@@ -39,11 +39,11 @@ extension MSCircularSlider {
             currentValue = min(max(newValue, minimumValue), maximumValue)
         }
     }
-    
+
     //================================================================================
     // SHAPE PROPERTIES
     //================================================================================
-    
+
     @IBInspectable public var _maximumAngle: CGFloat {
         get {
             return maximumAngle
@@ -53,7 +53,7 @@ extension MSCircularSlider {
             maximumAngle = modifiedNewValue < 360.0 ? modifiedNewValue : modifiedNewValue.truncatingRemainder(dividingBy: 360.0)
         }
     }
-    
+
     @IBInspectable public var _lineWidth: Int {
         get {
             return lineWidth
@@ -62,7 +62,7 @@ extension MSCircularSlider {
             lineWidth = newValue
         }
     }
-    
+
     @IBInspectable public var _filledColor: UIColor {
         get {
             return filledColor
@@ -71,7 +71,7 @@ extension MSCircularSlider {
             filledColor = newValue
         }
     }
-    
+
     @IBInspectable public var _unfilledColor: UIColor {
         get {
             return unfilledColor
@@ -80,7 +80,7 @@ extension MSCircularSlider {
             unfilledColor = newValue
         }
     }
-    
+
     @IBInspectable public var _rotationAngle: CGFloat {
         get {
             return rotationAngle ?? 0 as CGFloat
@@ -89,11 +89,11 @@ extension MSCircularSlider {
             rotationAngle = newValue
         }
     }
-    
+
     //================================================================================
     // HANDLE PROPERTIES
     //================================================================================
-    
+
     @IBInspectable public var _handleType: Int {   // Takes values from 0 to 3 only
         get {
             return handleType.rawValue
@@ -104,7 +104,7 @@ extension MSCircularSlider {
             }
         }
     }
-    
+
     @IBInspectable public var _handleColor: UIColor {
         get {
             return handleColor
@@ -122,7 +122,7 @@ extension MSCircularSlider {
             handleImage = newValue
         }
     }
-    
+
     @IBInspectable public var _handleEnlargementPoints: Int {
         get {
             return handleEnlargementPoints
@@ -131,7 +131,7 @@ extension MSCircularSlider {
             handleEnlargementPoints = newValue
         }
     }
-    
+
     @IBInspectable public var _handleHighlightable: Bool {
         get {
             return handleHighlightable
@@ -140,7 +140,7 @@ extension MSCircularSlider {
             handleHighlightable = newValue
         }
     }
-    
+
     @IBInspectable public var _handleRotatable: Bool {
         get {
             return handleRotatable
@@ -149,23 +149,22 @@ extension MSCircularSlider {
             handleRotatable = newValue
         }
     }
-    
+
     //================================================================================
     // LABELS PROPERTIES
     //================================================================================
-    
+
     @IBInspectable public var _commaSeparatedLabels: String {
         get {
             return labels.isEmpty ? "" : labels.joined(separator: ",")
         }
         set {
             if !newValue.trimmingCharacters(in: .whitespaces).isEmpty {
-                
                 labels = newValue.components(separatedBy: ",")
             }
         }
     }
-    
+
     @IBInspectable public var _labelFont: UIFont {
         get {
             return labelFont
@@ -174,7 +173,7 @@ extension MSCircularSlider {
             labelFont = newValue
         }
     }
-    
+
     @IBInspectable public var _labelColor: UIColor {
         get {
             return labelColor
@@ -183,7 +182,7 @@ extension MSCircularSlider {
             labelColor = newValue
         }
     }
-    
+
     @IBInspectable public var _labelOffset: CGFloat {
         get {
             return labelOffset
@@ -192,7 +191,7 @@ extension MSCircularSlider {
             labelOffset = newValue
         }
     }
-    
+
     @IBInspectable public var _snapToLabels: Bool {
         get {
             return snapToLabels
@@ -201,11 +200,11 @@ extension MSCircularSlider {
             snapToLabels = newValue
         }
     }
-    
-    //================================================================================
-    // MARKERS PROPERTIES
-    //================================================================================
-    
+
+  //================================================================================
+  // MARK: PROPERTIES
+  //================================================================================
+
     @IBInspectable public var _markerCount: Int {
         get {
             return markerCount
@@ -214,7 +213,7 @@ extension MSCircularSlider {
             markerCount = max(0, newValue)
         }
     }
-    
+
     @IBInspectable public var _markerColor: UIColor {
         get {
             return markerColor
@@ -223,7 +222,7 @@ extension MSCircularSlider {
             markerColor = newValue
         }
     }
-    
+
     @IBInspectable public var _markerImage: UIImage {
         get {
             return markerImage ?? UIImage()
@@ -232,7 +231,7 @@ extension MSCircularSlider {
             markerImage = newValue
         }
     }
-    
+
     @IBInspectable public var _snapToMarkers: Bool {
         get {
             return snapToMarkers
@@ -241,8 +240,4 @@ extension MSCircularSlider {
             snapToMarkers = newValue
         }
     }
-    
 }
-
-
-

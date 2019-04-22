@@ -9,11 +9,11 @@
 import UIKit
 
 extension MSDoubleHandleCircularSlider {
-    
+
     //================================================================================
     // DOUBLE HANDLE SLIDER PROPERTIES
     //================================================================================
-    
+
     @IBInspectable public var _minimumHandlesDistance: CGFloat {
         get {
             return minimumHandlesDistance
@@ -22,7 +22,7 @@ extension MSDoubleHandleCircularSlider {
             minimumHandlesDistance = newValue
         }
     }
-    
+
     @IBInspectable public var _secondCurrentValue: Double {
         get {
             return secondCurrentValue
@@ -31,11 +31,11 @@ extension MSDoubleHandleCircularSlider {
             secondCurrentValue = newValue
         }
     }
-    
+
     //================================================================================
     // SECOND HANDLE PROPERTIES
     //================================================================================
-    
+
     @IBInspectable public var _secondHandleType: Int {   // Takes values from 0 to 3 only
         get {
             return secondHandleType.rawValue
@@ -46,7 +46,7 @@ extension MSDoubleHandleCircularSlider {
             }
         }
     }
-    
+
     @IBInspectable public var _secondHandleColor: UIColor {
         get {
             return secondHandleColor
@@ -55,7 +55,7 @@ extension MSDoubleHandleCircularSlider {
             secondHandleColor = newValue
         }
     }
-    
+
     @IBInspectable public var _secondHandleImage: UIImage {
         get {
             return secondHandleImage ?? UIImage()
@@ -64,7 +64,7 @@ extension MSDoubleHandleCircularSlider {
             secondHandleImage = newValue
         }
     }
-    
+
     @IBInspectable public var _secondHandleEnlargementPoints: Int {
         get {
             return secondHandleEnlargementPoints
@@ -73,7 +73,7 @@ extension MSDoubleHandleCircularSlider {
             secondHandleEnlargementPoints = newValue
         }
     }
-    
+
     @IBInspectable public var _secondHandleHighlightable: Bool {
         get {
             return secondHandleHighlightable
@@ -82,7 +82,7 @@ extension MSDoubleHandleCircularSlider {
             secondHandleHighlightable = newValue
         }
     }
-    
+
     @IBInspectable public var _secondHandleRotatable: Bool {
         get {
             return secondHandleRotatable
@@ -91,5 +91,4 @@ extension MSDoubleHandleCircularSlider {
             secondHandleRotatable = newValue
         }
     }
-    
 }
